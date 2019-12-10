@@ -195,6 +195,10 @@ public class FreezeMonsterBoard extends AbstractBoard {
                     bomb.setDestroyed(true);
                 }
             }
+            
+            if(alien.frozen){
+                bomb.setDestroyed(true);
+            }
 
             if (!bomb.isDestroyed()) {
 
