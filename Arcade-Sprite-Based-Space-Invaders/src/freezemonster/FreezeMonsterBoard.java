@@ -130,7 +130,7 @@ public class FreezeMonsterBoard extends AbstractBoard {
                 int alienX = alien.getX();
                 int alienY = alien.getY();
 
-                if (alien.isVisible() && shot.isVisible()) {
+                if (alien.isVisible() && shot.isVisible() && !alien.frozen) {
                     if (shotX >= (alienX)
                             && shotX <= (alienX + freezemonster.Commons.ALIEN_WIDTH)
                             && shotY >= (alienY)
