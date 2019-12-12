@@ -7,21 +7,14 @@ import spriteframework.AbstractBoard;
 import spriteframework.sprite.BadSprite;
 import spriteframework.sprite.Player;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.Random;
 
 public class FreezeMonsterBoard extends AbstractBoard {
-    //define sprites
-    //private List<BadSprite> aliens;
     private WoodyRay shot;
 
-    // define global control vars
     private int deaths = 0;
     public String N;
 
@@ -38,7 +31,7 @@ public class FreezeMonsterBoard extends AbstractBoard {
     protected void createBadSprites() {  // create sprites
         for (int i = 1; i < 10; i++) {
             N = Integer.toString(i);
-                Monsters alien = new Monsters(freezemonster.Commons.ALIEN_INIT_X + 40 * i,  // Mudar esse space Invader COMMONS  PARA FREEZEMONSTER COMMONS***************
+                Monsters alien = new Monsters(freezemonster.Commons.ALIEN_INIT_X + 40 * i,
                         freezemonster.Commons.ALIEN_INIT_Y + 30 * i, N);
                 badSprites.add(alien);
             }
@@ -195,13 +188,12 @@ public class FreezeMonsterBoard extends AbstractBoard {
                     bomb.setDestroyed(true);
                 }
             }
-            
+
             if(alien.frozen){
                 bomb.setDestroyed(true);
             }
 
             if (!bomb.isDestroyed()) {
-
                 bomb.act();
             }
         }

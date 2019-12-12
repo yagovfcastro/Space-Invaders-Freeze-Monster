@@ -14,7 +14,6 @@ public class FreezeMonsterGame extends MainFrame{
         return new FreezeMonsterBoard("images/woody.png");
     }
 
-
     public static void main(String[] args) {
 
         EventQueue.invokeLater(() -> {
