@@ -27,30 +27,16 @@ public abstract class AbstractBoard extends JPanel {
 
     private Dimension d;
     public int jogo;
-    
-    //define sprites
-//    private List<Alien> aliens;
     protected LinkedList<Player> players;
     
     protected LinkedList<BadSprite> badSprites;
-    
-//    private Shot shot;
-//    
-    // define global control vars   
-//    private int direction = -1;
-//    private int deaths = 0;
 
     private int numberPlayers;  // to do - future use
     protected boolean inGame = true;
-//    private String explImg = "src/images/explosion.png";
     protected String message = "Game Over";
 
     protected Timer timer;
 
-    // Frozen Spots
-    //  void initBoard()
-    // 
-    // HotSpots
     protected abstract void createBadSprites();
     protected abstract void createOtherSprites();
     protected abstract void drawOtherSprites(Graphics g);

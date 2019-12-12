@@ -4,7 +4,6 @@ import javax.swing.ImageIcon;
 
 import spriteframework.Commons;
 
-import java.awt.Image;
 import java.awt.event.KeyEvent;
 
 public class Player extends Sprite {
@@ -25,8 +24,8 @@ public class Player extends Sprite {
 		resetState();
     }
 
-    protected void loadImage (String image) { // mudei
-        ImageIcon ii = new ImageIcon(image); // mudei
+    protected void loadImage (String image) {
+        ImageIcon ii = new ImageIcon(image);
         width = ii.getImage().getWidth(null);
         setImage(ii.getImage());
     }
@@ -59,6 +58,16 @@ public class Player extends Sprite {
         if (y <= 2) {
 
             y = 2;
+        }
+
+        if (x >= 765) {
+
+            x = 765;
+        }
+
+        if (y >= 710) {
+
+            y = 710;
         }
 
         if (x >= Commons.BOARD_WIDTH2 - 2) {
